@@ -10,6 +10,14 @@
     		"mqtt",
     		"heroku"
   	],  
+	"dependencies": {
+		"lowdb": "^0.14.0",
+    		"querystring": "^0.2.0",
+		"http": "^0.0.0",
+		"express": "^4.13.4",
+		"mosca": "^2.0.1",
+		"@tensorflow/tfjs-node": "^0.1.7"
+	},
 	"author": "3w3rt0n",  
 	"license": "MIT"
 }
