@@ -37,7 +37,7 @@ mqtt.on('published', function(packet, client) {
   console.log('Published : ', packet.payload);
 });
 
-server.on('subscribed', function(topic, client) {
+mqtt.on('subscribed', function(topic, client) {
   console.log('subscribed : ', topic);
 });
 
