@@ -22,7 +22,7 @@ var serverhttp = http.createServer(function(request, response){
 });
 
 var mqtt = new mosca.Server(settings, function() {
-    serverhttp.attachHttpServer(app);
+    mqtt.attachHttpServer(serverhttp);
 });
 
 mqtt.on('ready', function(){
