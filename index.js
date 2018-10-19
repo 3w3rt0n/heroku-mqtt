@@ -6,7 +6,7 @@ var settings = {
 		port:1883
 }
 
-var servehttp = http.createServer(function(request, response){
+var serverhttp = http.createServer(function(request, response){
 	response.writeHead(200, {"Content-Type": "text/html"});
 	if(request.url == "/"){
 		response.write("<h1>Página principal</h1>");
