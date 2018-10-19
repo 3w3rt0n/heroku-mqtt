@@ -1,13 +1,13 @@
 {  
-	"name": "heroku-teste",  
+	"name": "heroku-mqtt",  
 	"version": "1.0.0",  
-	"description": "Teste de deploy no Heroku",  
+	"description": "Servidor MQTT",  
 	"main": "index.js",  
 	"scripts": {    
 		"start": "node index.js"
 	},  
 	"keywords": [
-    		"teste",
+    		"mqtt",
     		"heroku"
   	],  
 	"author": "3w3rt0n",  
