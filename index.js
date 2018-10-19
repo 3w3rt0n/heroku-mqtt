@@ -6,7 +6,7 @@ var settings = {
 		port:1883
 }
 
-var http = http.createServer(function(request, response){
+var servehttp = http.createServer(function(request, response){
 	response.writeHead(200, {"Content-Type": "text/html"});
 	if(request.url == "/"){
 		response.write("<h1>Página principal</h1>");
@@ -53,6 +53,6 @@ mqtt.on('clientDisconnected', function(client) {
   console.log('clientDisconnected : ', client.id);
 });
 
-http.listen(process.env.PORT || 5000, function(){
+serverhttp.listen(process.env.PORT || 5000, function(){
 	console.log('Servidor HTTP rodando!');
 });
