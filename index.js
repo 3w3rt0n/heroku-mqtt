@@ -3,23 +3,23 @@ const express = require('express');
 const http = require('http');
 
 var settings = {
-		port:1883
+		port:80
 }
 
-var serverhttp = http.createServer(function(request, response){
-	response.writeHead(200, {"Content-Type": "text/html"});
-	if(request.url == "/"){
-		response.write("<h1>Página principal</h1>");
-		console.log('Pagina inicial');
-	}else if(request.url == "/bemvindo"){
-		response.write("<h1>Bem-vindo :)</h1>");
-		console.log('Pagina bem vindo');
-	}else{
-		response.write("<h1>Página não encontrada :(</h1>");
-		console.log('Pagina nao encontrada');
-	}
-	response.end();
-});
+#var serverhttp = http.createServer(function(request, response){
+#	response.writeHead(200, {"Content-Type": "text/html"});
+#	if(request.url == "/"){
+#		response.write("<h1>Página principal</h1>");
+#		console.log('Pagina inicial');
+#	}else if(request.url == "/bemvindo"){
+#		response.write("<h1>Bem-vindo :)</h1>");
+#		console.log('Pagina bem vindo');
+#	}else{
+#		response.write("<h1>Página não encontrada :(</h1>");
+#		console.log('Pagina nao encontrada');
+#	}
+#	response.end();
+#});
 
 var mqtt = new mosca.Server(settings, function() {
     mqtt.attachHttpServer(serverhttp);
