@@ -3,7 +3,7 @@ const express = require('express');
 const http = require('http');
 
 var settings = {
-		port:80
+		port:5000
 }
 
 var mqtt = new mosca.Server(settings, function() {
@@ -36,8 +36,4 @@ mqtt.on('clientDisconnecting', function(client) {
 
 mqtt.on('clientDisconnected', function(client) {
   console.log('clientDisconnected : ', client.id);
-});
-
-serverhttp.listen(process.env.PORT || 5000, function(){
-	console.log('Servidor HTTP rodando!');
 });
